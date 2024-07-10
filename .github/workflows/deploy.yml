@@ -7,10 +7,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guekhendalai
     steps:
       - uses: actions/checkout@v4  # Ensure the repository is checked out
       - name: Install dependencies
-        working-directory: guekhendalai
         run: npm install
       - name: Build
         run: npm run build
