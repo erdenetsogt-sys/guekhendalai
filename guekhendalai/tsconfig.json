@@ -1,23 +1,26 @@
 // {
-//   "files": [],
-//   "references": [
-//     {
-//       "path": "./tsconfig.app.json"
+//   "compilerOptions": {
+//     "baseUrl": "./src",
+//     "paths": {
+//       "@/components/ui/*": ["components/ui/*"],
+//       "@/lib/*": ["lib/*"]
 //     },
-//     {
-//       "path": "./tsconfig.node.json"
-//     }
-//   ]
+//     "jsx": "react-jsx"
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["node_modules"]
 // }
+
 {
   "compilerOptions": {
-    // ...
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
-    // ...
-  }
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
+    },
+    "jsx": "react-jsx",
+    // other compiler options as needed
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
